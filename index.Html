@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Akarsh Rao Govindaraju | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #f5f7fa;
+      color: #333;
+      scroll-behavior: smooth;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    body.dark {
+      background-color: #1a1a1a;
+      color: #f5f5f5;
+    }
+    header {
+      background-color: #2c3e50;
+      color: white;
+      padding: 2rem 1rem 1rem;
+      text-align: center;
+      position: relative;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    header p {
+      margin: 0.5rem 0 1rem;
+      font-size: 1.2rem;
+    }
+    nav {
+      background-color: #34495e;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 0.5rem 0;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+    section {
+      margin-bottom: 3rem;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 0.6s ease-out forwards;
+    }
+    section:nth-child(even) {
+      animation-delay: 0.2s;
+    }
+    section:nth-child(odd) {
+      animation-delay: 0.4s;
+    }
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+    h2 {
+      color: #2c3e50;
+      border-bottom: 2px solid #2980b9;
+      padding-bottom: 0.5rem;
+    }
+    body.dark h2 {
+      color: #f5f5f5;
+      border-bottom: 2px solid #3498db;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* Two cards per row for Projects */
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* Three cards per row for Skills */
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+    .card {
+      background-color: white;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .card h3 {
+      margin-top: 0;
+      color: #2980b9;
+    }
+    body.dark .card {
+      background-color: #2c2c2c;
+      color: #f5f5f5;
+    }
+    footer {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+    .theme-switch {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 100px;
+      height: 40px;
+      background-color: #ddd;
+      border-radius: 25px;
+      border: 2px solid #aaa;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 10px;
+      font-size: 18px;
+      user-select: none;
+    }
+    .theme-toggle-thumb {
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      background-color: #fff;
+      border-radius: 50%;
+      top: 4px;
+      left: 4px;
+      transition: transform 0.3s ease;
+    }
+    body.dark .theme-toggle-thumb {
+      transform: translateX(52px);
+    }
+    .email-button {
+      display: inline-block;
+      padding: 0.6rem 1.2rem;
+      background-color: #2980b9;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+    .email-button:hover {
+      background-color: #1f5f8b;
+    }
+  </style>
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('dark');
+    }
+  </script>
+</head>
+<body>
+
+<header>
+  <h1>Akarsh Rao Govindaraju</h1>
+  <p>Software Engineer | Educator | Tech Enthusiast</p>
+  <div class="theme-switch" onclick="toggleTheme()">
+    🌞 <div class="theme-toggle-thumb"></div> 🌜
+  </div>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#projects">Projects</a>
+  <a href="#experience">Experience</a>
+  <a href="#skills">Skills</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<div class="container">
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Enthusiastic and versatile Software Engineer with experience in teaching core computer science concepts, software development, and school-level IT operations. Passionate about building user-centric digital tools and learning platforms.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>LLM-Powered Chatbot</h3>
+        <p>Developed a chatbot with a custom school-specific knowledge base using large language models to provide natural, context-aware responses for academic and administrative queries.</p>
+      </div>
+      <div class="card">
+        <h3>Content Summarizer</h3>
+        <p>Designed a web tool for summarizing text using TF-IDF and NLP, improving readability and aiding learning.</p>
+      </div>
+      <div class="card">
+        <h3>Number Plate Recognizer</h3>
+        <p>Built a system with OpenCV and machine learning to recognize vehicle number plates in real-time scenarios.</p>
+      </div>
+      <div class="card">
+        <h3>Blockchain Crowdfunding</h3>
+        <p>Developed a decentralized and transparent crowdfunding platform leveraging blockchain.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="card">
+      <h3>Computer Science Educator & Technical Coordinator</h3>
+      <p><strong>Full-Time | 2024 – Present</strong></p>
+      <ul>
+        <li>Teaching programming, cybersecurity, AI & robotics to Grades 1–10</li>
+        <li>Managing the school’s website and digital tools</li>
+        <li>Providing IT support for school systems and events</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Technical Skills</h2>
+    <div class="skills-grid">
+      <div class="card">
+        <h3>Languages & Tools</h3>
+        <p>Java, Python, SQL, Wireshark, Network Analysis</p>
+      </div>
+      <div class="card">
+        <h3>Concepts</h3>
+        <p>Object-Oriented Programming, SDLC, Agile, Threat Detection</p>
+      </div>
+      <div class="card">
+        <h3>Others</h3>
+        <p>Teaching & Mentorship, Digital Classroom Tools, Public Speaking</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Get in Touch</h2>
+    <a href="mailto:gakarshrao@gmail.com" class="email-button">📧 Get in Touch</a>
+    <p>For more details, contact me at gakarshrao@gmail.com</p>
+  </section>
+</div>
+
+<footer>
+  <p>© 2025 Akarsh Rao Govindaraju. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
