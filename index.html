@@ -6,9 +6,7 @@
   <title>Akarsh Rao Govindaraju | Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: 'Roboto', sans-serif;
@@ -28,14 +26,8 @@
       text-align: center;
       position: relative;
     }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-    header p {
-      margin: 0.5rem 0 1rem;
-      font-size: 1.2rem;
-    }
+    header h1 { margin: 0; font-size: 2.5rem; }
+    header p { margin: 0.5rem 0 1rem; font-size: 1.2rem; }
     nav {
       background-color: #34495e;
       display: flex;
@@ -48,9 +40,7 @@
       text-decoration: none;
       font-weight: bold;
     }
-    nav a:hover {
-      text-decoration: underline;
-    }
+    nav a:hover { text-decoration: underline; }
     .container {
       max-width: 1000px;
       margin: auto;
@@ -62,12 +52,8 @@
       transform: translateY(30px);
       animation: fadeInUp 0.6s ease-out forwards;
     }
-    section:nth-child(even) {
-      animation-delay: 0.2s;
-    }
-    section:nth-child(odd) {
-      animation-delay: 0.4s;
-    }
+    section:nth-child(even) { animation-delay: 0.2s; }
+    section:nth-child(odd) { animation-delay: 0.4s; }
     @keyframes fadeInUp {
       to {
         opacity: 1;
@@ -83,18 +69,13 @@
       color: #f5f5f5;
       border-bottom: 2px solid #3498db;
     }
-    .grid {
+    .grid, .skills-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr); /* Two cards per row for Projects */
       gap: 1.5rem;
       margin-top: 1rem;
     }
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr); /* Three cards per row for Skills */
-      gap: 1.5rem;
-      margin-top: 1rem;
-    }
+    .grid { grid-template-columns: repeat(2, 1fr); }
+    .skills-grid { grid-template-columns: repeat(3, 1fr); }
     .card {
       background-color: white;
       padding: 1rem;
@@ -102,10 +83,7 @@
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       transition: background-color 0.3s, color 0.3s;
     }
-    .card h3 {
-      margin-top: 0;
-      color: #2980b9;
-    }
+    .card h3 { margin-top: 0; color: #2980b9; }
     body.dark .card {
       background-color: #2c2c2c;
       color: #f5f5f5;
@@ -156,9 +134,7 @@
       font-weight: bold;
       margin-bottom: 1rem;
     }
-    .email-button:hover {
-      background-color: #1f5f8b;
-    }
+    .email-button:hover { background-color: #1f5f8b; }
   </style>
   <script>
     function toggleTheme() {
@@ -167,15 +143,13 @@
   </script>
 </head>
 <body>
-
 <header>
   <h1>Akarsh Rao Govindaraju</h1>
-  <p>Software Engineer | Educator | Tech Enthusiast</p>
+  <p>Software Engineer | Cybersecurity Enthusiast | Educator</p>
   <div class="theme-switch" onclick="toggleTheme()">
     🌞 <div class="theme-toggle-thumb"></div> 🌜
   </div>
 </header>
-
 <nav>
   <a href="#about">About</a>
   <a href="#projects">Projects</a>
@@ -183,76 +157,68 @@
   <a href="#skills">Skills</a>
   <a href="#contact">Contact</a>
 </nav>
-
 <div class="container">
   <section id="about">
     <h2>About Me</h2>
-    <p>Enthusiastic and versatile Software Engineer with experience in teaching core computer science concepts, software development, and school-level IT operations. Passionate about building user-centric digital tools and learning platforms.</p>
+    <p>Enthusiastic and versatile Software Engineer with strong practical experience in software development, cybersecurity, and networking. Skilled in Java, Python, and blockchain technologies, with hands-on experience in building AI-powered applications and managing technical projects. Seeking a challenging role to leverage technical expertise and problem-solving skills in a dynamic professional environment.</p>
   </section>
-
   <section id="projects">
     <h2>Projects</h2>
     <div class="grid">
       <div class="card">
-        <h3>LLM-Powered Chatbot</h3>
-        <p>Developed a chatbot with a custom school-specific knowledge base using large language models to provide natural, context-aware responses for academic and administrative queries.</p>
+        <h3>LLM-Powered Knowledge-Based Chatbot</h3>
+        <p>Built an AI chatbot integrated with a custom knowledge base to answer academic and administrative queries using prompt engineering techniques.</p>
       </div>
       <div class="card">
-        <h3>Content Summarizer</h3>
-        <p>Designed a web tool for summarizing text using TF-IDF and NLP, improving readability and aiding learning.</p>
+        <h3>NLP-Based Content Summarizer</h3>
+        <p>Developed a web tool for text summarization using TF-IDF and NLP to improve content readability and comprehension.</p>
       </div>
       <div class="card">
-        <h3>Number Plate Recognizer</h3>
-        <p>Built a system with OpenCV and machine learning to recognize vehicle number plates in real-time scenarios.</p>
+        <h3>Number Plate Recognizer using ML</h3>
+        <p>Designed and implemented a machine learning system for real-time vehicle number plate extraction using OpenCV and supervised learning.</p>
       </div>
       <div class="card">
-        <h3>Blockchain Crowdfunding</h3>
-        <p>Developed a decentralized and transparent crowdfunding platform leveraging blockchain.</p>
+        <h3>Blockchain-Powered Crowdfunding Platform</h3>
+        <p>Created a decentralized crowdfunding solution to enhance security and transparency of transactions using blockchain technology.</p>
       </div>
     </div>
   </section>
-
   <section id="experience">
     <h2>Experience</h2>
     <div class="card">
-      <h3>Computer Science Educator & Technical Coordinator</h3>
+      <h3>Software Engineer & Technical Coordinator</h3>
       <p><strong>Full-Time | 2024 – Present</strong></p>
       <ul>
-        <li>Teaching programming, cybersecurity, AI & robotics to Grades 1–10</li>
-        <li>Managing the school’s website and digital tools</li>
-        <li>Providing IT support for school systems and events</li>
+        <li>Developed and maintained the school’s digital infrastructure, including website and internal tools.</li>
+        <li>Provided IT support and troubleshooting for various systems and events.</li>
       </ul>
     </div>
   </section>
-
   <section id="skills">
     <h2>Technical Skills</h2>
     <div class="skills-grid">
       <div class="card">
-        <h3>Languages & Tools</h3>
-        <p>Java, Python, SQL, Wireshark, Network Analysis</p>
+        <h3>Programming & Tools</h3>
+        <p>Java, Python, SQL, MS Office, Gmail, Wireshark, Internet Tools</p>
       </div>
       <div class="card">
         <h3>Concepts</h3>
-        <p>Object-Oriented Programming, SDLC, Agile, Threat Detection</p>
+        <p>OOP, SDLC, Agile, Routing & Switching, Threat Detection</p>
       </div>
       <div class="card">
         <h3>Others</h3>
-        <p>Teaching & Mentorship, Digital Classroom Tools, Public Speaking</p>
+        <p>Teaching & Mentorship, Public Speaking, Content Creation</p>
       </div>
     </div>
   </section>
-
   <section id="contact">
     <h2>Get in Touch</h2>
     <a href="mailto:gakarshrao@gmail.com" class="email-button">📧 Get in Touch</a>
     <p>For more details, contact me at gakarshrao@gmail.com</p>
   </section>
 </div>
-
 <footer>
   <p>© 2025 Akarsh Rao Govindaraju. All rights reserved.</p>
 </footer>
-
 </body>
 </html>
